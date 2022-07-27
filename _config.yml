@@ -10,7 +10,7 @@ baseurl: ''
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: ko-KR
 
 # Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
 prefer_datetime_locale:
@@ -29,7 +29,7 @@ description: >-                        # used by seo meta and the atom feed
   개발 공부 및 기록
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://sonmansu.github.io/'
+url: 'https://sonmansu.github.io'
 
 github:
   username: sonmansu             # change to your github username
@@ -93,7 +93,7 @@ comments:
   # The active options are as follows:
   disqus:
     comments: true
-    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: man son   # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo:         # <gh-username>/<repo>
