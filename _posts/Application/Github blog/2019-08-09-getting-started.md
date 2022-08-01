@@ -2,7 +2,7 @@
 title: Getting Started
 author: cotes
 date: 2019-08-09 20:55:00 +0800
-categories: [Blogging, Tutorial]
+categories: [Application, Github blog]
 tags: [getting started]
 pin: true
 ---
