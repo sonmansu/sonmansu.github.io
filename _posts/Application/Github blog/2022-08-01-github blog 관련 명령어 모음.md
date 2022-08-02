@@ -3,6 +3,7 @@ layout: post
 title: github blog 관련 명령어 모음
 date: 2022-08-01 11:21 +0900
 categories: [Application, Github blog]
+tags: [github blog, github io]
 ---
 
 서버 실행 단축키

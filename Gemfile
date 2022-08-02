@@ -27,3 +27,5 @@ gem "webrick", "~> 1.7"
 gem 'jekyll-compose', group: [:jekyll_plugins]
 # 구글 검색 엔진
 gem 'jekyll-sitemap'
+# 고정 목차 달기
+gem 'jekyll-toc'
