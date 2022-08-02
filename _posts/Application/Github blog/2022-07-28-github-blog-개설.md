@@ -46,6 +46,14 @@ Conflict: c:/github exists and is not empty. 이런 식의 에러가  났다.
 
 ([참고링크](https://junho85.pe.kr/1850))
 
+## ２.３--- layout: home # Index page ---
+
+로컬 환경에서는 테마가 정상적으로 적용되는데  
+웹사이트에서는 --- layout: home # Index page --- 이런 글자(index.html 파일 내용)만 뜨는 경우이다.  
+
+
+
+
 # ３. 추가 팁
 ## ３.１ VSC를 마크다운 편집기로 사용하는 방법
 `Markdown All in One` 플러그인을 설치해서 본다.
