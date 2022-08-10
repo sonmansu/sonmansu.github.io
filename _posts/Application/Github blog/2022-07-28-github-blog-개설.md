@@ -49,24 +49,80 @@ Conflict: c:/github exists and is not empty. 이런 식의 에러가  났다.
 ## ２.３--- layout: home # Index page ---
 
 로컬 환경에서는 테마가 정상적으로 적용되는데  
-웹사이트에서는 --- layout: home # Index page --- 이런 글자(index.html 파일 내용)만 뜨는 경우이다.  
+웹사이트에서는 --- layout: home # Index page --- 이런 텍스트(index.html 파일 내용)만 뜨는 경우이다.  
+
+![](https://sonmansu.github.io/images/2022-07-28-github-blog-개설/img-220803-012701-955.png)
 
 
+본인 깃헙 블로그 레포지토리에서 Setting - Pages에 가면 Source에서 Branch를 바꿀 수 있는데     
+여기서 gh-pages, /(root)를 선택하고 Save를 누른다.  
+3-5분 기다리면 블로그가 정상적으로 뜬다
+
+## ２.４ 404 error
+깃헙 레포 visibility를 private으로 바꿨다가 블로그가 정상적으로 안떠서 (private으로 블로그를 운영하고 싶으면 enterprise plan을 써야한다고함..)   
+public으로 다시 바꿨더니 404 에러가 발생했다.
+
+![](https://sonmansu.github.io/images/2022-07-28-github-blog-개설/img-220803-012712-955.png)
+
+본인 깃헙 블로그 레포지토리에서 Setting - Pages에 갔더니 Branch 설정이 풀려있어서 다시  
+gh-pages, /(root)를 선택하고 Save를 눌렀다.  
+
+그래도 여전히 404 에러가 떴다...
+
+
+검색해보니 현재 블로그 코드를 commit후 push를 하면 접속이 된다고 한다.  
+아마 푸시가 발생할때 github pages 에서 빌드가 발생하는 거 같다고 한다..  
+그러나 이 방법으로 되지 않았다.
+
+내가 해결한 방법은  
+https://[사용자명].github.io/ 뒤에 index.html을 붙였더니 페이지에 접속이 됐다.  
+이 이후로는 index.html을 붙이지 않아도 접속이 정상적으로 된다. 
+
+
+## ２.５ 이미지가 뜨지 않음 
+구글에 지킬 이미지 넣기를 검색해보면  
+다들 루트 폴더에 images폴더를 생성해 이미지를 넣고  
+```
+![](/images/사진.jpg) 
+```
+이런 식으로 이미지 주소를 상대경로로 지정하는 데 나는 죽어도 사진이 안떴었다..  
+아래처럼 깃헙 주소까지 포함해서 절대 경로로 지정해주는 경우에만 사진이 제대로 떴다.
+```
+![Image8](https://sonmansu.github.io/images/의자.jpg)  
+```
+
+<br/>
+하지만 이미지 경로를 일일히 지정해주는 게 귀찮아서..  
+지킬 블로그 설명 문서를 다시 읽어보다가 해결 방법을 찾아냈다.  
+
+_config.yml 파일에
+```
+# img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+```
+img_cdn을 주석시키면 된다.  
+이 cdn 주소가 '/'가 붙은 모든 경로 앞에 붙어있었기 때문에 이미지가 안떴었던 것이다.  
+
+<br/>
+<br/>
+위 주소를 주석시키고 나면  
+avatar(대표사진으로 쓰일 이미지 파일) 경로를 재지정하라는 오류가 뜨는데 
+그거는 avatar에 지정돼있던 이미지가 위 경로에서 가져온 이미지 이기 때문이다.  
+
+_config.yml 에
+avatar 경로를 재지정 해준다. 일반적으로 `/assets/img/` 폴더에 이미지를 넣고 불러 쓴다.
+
+```
+avatar: '/assets/img/myicon.png'
+```
 
 
 # ３. 추가 팁
 ## ３.１ VSC를 마크다운 편집기로 사용하는 방법
-`Markdown All in One` 플러그인을 설치해서 본다.
+`Markdown All in One` 플러그인을 설치해서 사용한다.
 
 ([참고링크](https://sianux1209.github.io/etc/markdown_editor_vscode/))
 
 
-
-근데 vsc로 md를 편집하려니 한쪽은 문서창 한쪽은 md viewer창으로 나눠서 봐야돼서 불편했다..  
-
-원래 md 문서 편집기로 typora를 썼는데 유료화가 돼서
-지금은 급한대로 obsidian을 설치해서 쓰고 있다.
-obsidian은 한글로 된 자료가 거의 없고 사용법을 보려면 영어 커뮤니티를 뒤져야한다 ㅎ
 
 
 # ４. 의문점
