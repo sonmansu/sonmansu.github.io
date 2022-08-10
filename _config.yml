@@ -80,10 +80,12 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+# img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+# 저 img_cdn때문에 이미지가 안뜨고있었네.. 윗줄 주석시킴
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/commons/avatar.jpg'
+# avatar: '/commons/avatar.jpg'
+avatar: '/assets/img/myicon.png'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
