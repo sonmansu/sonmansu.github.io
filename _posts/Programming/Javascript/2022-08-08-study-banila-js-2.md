@@ -2,7 +2,7 @@
 layout: post
 title: "[study] 바닐라 자바스크립트 2장"
 date: 2022-08-08 01:41 +0900
-categories: [Programming, Javascript]
+categories: [Programming, JavaScript]
 tags: [javascript, 공부]
 ---
 
@@ -325,3 +325,5 @@ if(isNaN(age) || age < 0) {
     console.log("You can do whatever you want.");
 }
 ```
+
+

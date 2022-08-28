@@ -2,11 +2,13 @@
 layout: post
 title: "[study] 바닐라 자바스크립트 3장"
 date: 2022-08-10 19:41 +0900
-categories: [Programming, Javascript]
+categories: [Programming, JavaScript]
 tags: [javascript, 공부]
 ---
 
+{% comment %}
 - 다시볼것: 3.0, 3.1
+{% endcomment %}
   
 ### ３.0 The Document Object
 
